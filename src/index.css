@@ -1,0 +1,24 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+}
+imput {
+  width: 314px;
+  height: 52px;
+  background: #f8f9fa;
+
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+}
+#root {
+  width: 100%;
+}

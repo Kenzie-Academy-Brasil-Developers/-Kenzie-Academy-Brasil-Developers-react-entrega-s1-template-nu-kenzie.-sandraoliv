@@ -1,0 +1,19 @@
+.transactionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card {
+  height: 60px;
+  list-style: none;
+  background-color: #f8f9fa;
+  width: 277px;
+  height: 52px;
+  gap: 10px;
+  border-left: #03b898;
+}
+
+.entries {
+  border-left: #03b898;
+}

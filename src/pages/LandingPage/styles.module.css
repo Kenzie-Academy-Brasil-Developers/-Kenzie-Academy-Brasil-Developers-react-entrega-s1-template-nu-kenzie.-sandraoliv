@@ -1,0 +1,81 @@
+.logo {
+  width: 122.68px;
+  height: 19.53px;
+}
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: #242424;
+}
+
+.title {
+  font-family: "Nunito", sans-serif;
+  color: #f9f9f9;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 48px;
+}
+p {
+  color: #f9f9f9;
+  width: max-content;
+}
+.landingPageButton {
+  height: 48px;
+  width: 90%;
+
+  border-radius: 8px;
+  padding: 13px 20px 13px 20px;
+  background-color: #fd377e;
+  color: #f9f9f9;
+}
+.landingPageHeader {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-top: 6rem;
+}
+.imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.landingPage {
+  width: 308px;
+  height: 308px;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    width: 50%;
+  }
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    gap: 20px;
+  }
+  .landingPageButton {
+    height: 48px;
+    width: 241px;
+    align-self: auto;
+    border: none;
+    cursor: pointer;
+  }
+  .landingPage {
+    width: 480px;
+    height: 480px;
+  }
+  header > p {
+    text-align: start;
+  }
+  .title {
+    width: 370px;
+  }
+} ;
