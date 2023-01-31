@@ -112,16 +112,26 @@ button {
   gap: 20px;
   margin-left: 12px;
 }
+.FormAndTransactions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 @media (min-width: 769px) {
   .homePageButton {
     cursor: pointer;
   }
   .FormAndTransactions {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 3rem;
+    position: absolute;
+    left: 10px;
+    top: 116px;
   }
   .formContainer {
     width: 363px;

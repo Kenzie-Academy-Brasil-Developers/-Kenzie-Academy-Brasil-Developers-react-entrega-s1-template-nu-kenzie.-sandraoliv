@@ -1,16 +1,27 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-export function Form() {
+export function Form({
+  setListTransactions,
+  listTransactions,
+  handleSumTotal,
+}) {
   const [formData, setFormData] = useState({
     description: "",
-    value: "",
-    typeOfEntry: "",
+    type: "entrada",
+    value: {},
   });
+
+  function addData(formData) {
+    setListTransactions([...listTransactions, formData]);
+    handleSumTotal();
+  }
 
   function submit(event) {
     event.preventDefault();
-    console.log(formData);
-    setFormData({ description: "", value: "", typeOfEntry: "" });
+    if (formData.description != "") {
+      addData(formData);
+      setFormData({ description: "", type: "entrada", value: {} });
+    }
   }
   return (
     <div className={styles.formContainer}>
@@ -33,18 +44,28 @@ export function Form() {
           <div className={styles.value}>
             <label htmlFor="valor">Valor</label>
             <input
+              placeholder="Digite um valor"
               type="number"
               id="valor"
               value={formData.value}
               className={styles.valor}
               onChange={(event) =>
-                setFormData({ ...formData, value: event.target.value })
+                setFormData({
+                  ...formData,
+                  value: event.target.value,
+                })
               }
             />
           </div>
           <div className={styles.select}>
             <label htmlFor="tipodeentrada">Tipo de entada</label>
-            <select>
+
+            <select
+              defaultValue={formData.type}
+              onChange={(event) =>
+                setFormData({ ...formData, type: event.target.value })
+              }
+            >
               <option value="entrada">Entrada</option>
               <option value="saida">Saída</option>
             </select>
