@@ -13,7 +13,7 @@ export function Form({
 
   function addData(formData) {
     setListTransactions([...listTransactions, formData]);
-    handleSumTotal();
+    console.log();
   }
 
   function submit(event) {
