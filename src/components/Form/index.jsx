@@ -1,30 +1,27 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-export function Form({
-  setListTransactions,
-  listTransactions,
-  handleSumTotal,
-}) {
+export function Form({ setListTransactions, listTransactions }) {
   const [formData, setFormData] = useState({
     description: "",
     type: "entrada",
-    value: {},
+    value: 0,
   });
 
   function addData(formData) {
     setListTransactions([...listTransactions, formData]);
-    console.log();
   }
 
   function submit(event) {
     event.preventDefault();
     if (formData.description != "") {
       addData(formData);
-      setFormData({ description: "", type: "entrada", value: {} });
+      setFormData({ description: "", type: "entrada", value: 0 });
     }
   }
   return (
     <div className={styles.formContainer}>
+      {formData.description}
+      {formData.value}
       <form className={styles.form} onSubmit={submit}>
         <div className={styles.descriptionLabel}>
           <label htmlFor="descricao">Descrição</label>

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
-export function TotalValue({ listTransactions, total }) {
+export function TotalValue({ listTransactions }) {
+  const total = listTransactions.reduce(
+    (previosValue, currentValue) => previosValue + currentValue.value,
+    0
+  );
+
   return (
     <>
       <div>
