@@ -18,10 +18,9 @@ export function Form({ setListTransactions, listTransactions }) {
       setFormData({ description: "", type: "entrada", value: 0 });
     }
   }
+
   return (
     <div className={styles.formContainer}>
-      {formData.description}
-      {formData.value}
       <form className={styles.form} onSubmit={submit}>
         <div className={styles.descriptionLabel}>
           <label htmlFor="descricao">Descrição</label>

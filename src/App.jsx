@@ -6,9 +6,15 @@ import { LandingPage } from "./pages/LandingPage";
 function App() {
   const [isHome, setIsHome] = useState(false);
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: 150 },
+    {
+      description: "Salário recebido",
+      type: "entrada",
+      value: 2500,
+      id: uuidv4(),
+    },
+    { description: "Conta de luz", type: "saída", value: 150, id: uuidv4() },
   ]);
+
   return (
     <>
       {isHome === false ? (
