@@ -1,11 +1,15 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 export function TotalValue({ listTransactions }) {
+  console.log(listTransactions);
   const total = listTransactions.reduce(
-    (previosValue, currentValue) => previosValue + currentValue.value,
+    (previosValue, currentValue) =>
+      currentValue.type === "entrada"
+        ? previosValue + currentValue.value
+        : previosValue - currentValue.value,
+
     0
   );
-
   return (
     <>
       <div>

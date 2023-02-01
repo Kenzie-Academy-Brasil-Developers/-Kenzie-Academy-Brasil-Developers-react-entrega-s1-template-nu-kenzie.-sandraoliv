@@ -48,7 +48,7 @@ export function Form({ setListTransactions, listTransactions }) {
               onChange={(event) =>
                 setFormData({
                   ...formData,
-                  value: event.target.value,
+                  value: Number(event.target.value),
                 })
               }
             />
